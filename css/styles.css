@@ -1,0 +1,2753 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "godofthundermedium";
+  src: url("../fonts/godofthunder-0wo1p-webfont.woff2") format("woff2"),
+    url("../fonts/godofthunder-0wo1p-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/************* COMMON STYLES *************/
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+button {
+  width: 188px;
+  height: 61px;
+
+  background-color: var(--yellow-color);
+  border-color: var(--yellow-color);
+  border-radius: 5px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+
+  cursor: pointer;
+}
+
+html {
+  height: 100%;
+
+  scroll-behavior: smooth;
+
+  --footer-color: #0b0b0b;
+  --partners-color: #0e0e0e;
+  --black-color: #111111;
+  --grey-color: #393939;
+  --awards-color: #888888;
+  --yellow-color: #f5b942;
+  --white-color: #ffffff;
+
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  padding: 60px;
+}
+
+.secondary-header {
+  background-color: var(--footer-color);
+}
+
+.logo {
+  flex: 1;
+}
+
+.minilogo {
+  display: flex;
+
+  font-family: "godofthundermedium";
+  font-size: 25px;
+  color: var(--white-color);
+  text-shadow: 7px 7px 5px #111111;
+}
+
+.nav {
+  flex: 2;
+}
+
+.regular-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.regular-nav li {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.regular-nav li a {
+  background: linear-gradient(0deg, white, white) no-repeat right bottom / 0
+    var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 100%;
+  padding-bottom: 2px;
+  --bg-h: 2px;
+}
+
+.regular-nav li a:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+.regular-nav li a {
+  color: var(--white-color);
+  text-shadow: 7px 7px 5px #111111;
+
+  text-decoration: none;
+  line-height: 1;
+}
+
+.collapsed-nav {
+  width: 50px;
+  height: 50px;
+
+  background-image: url(../assets/collapsed.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  cursor: pointer;
+  display: none;
+
+  position: relative;
+}
+
+.collapsed-content {
+  width: fit-content;
+  height: fit-content;
+
+  position: absolute;
+  top: 60px;
+  right: 1px;
+
+  display: none;
+
+  background-color: var(--footer-color);
+
+  z-index: 9999;
+}
+
+.collapsed-content li {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+
+  text-align: center;
+
+  padding: 50px;
+}
+
+.collapsed-content li a {
+  color: var(--white-color);
+}
+
+.show {
+  display: block;
+}
+
+.title-section {
+  margin-bottom: 60px;
+}
+
+.title-section h2 {
+  margin-top: 41px;
+
+  text-transform: uppercase;
+  color: var(--yellow-color);
+}
+
+/************************************ HERO ************************************/
+
+.hero {
+  height: 1080px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../assets/hero-background.png);
+
+  margin-bottom: 60px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 220px 620px 0 0;
+
+  color: var(--white-color);
+  text-shadow: 7px 7px 5px #000000bf;
+  font-weight: 700;
+}
+
+.legend h1 {
+  font-size: 4em;
+}
+
+.legend span {
+  font-size: 1.3em;
+}
+
+/************************************ ABOUT ************************************/
+
+.about {
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.about .content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .content-section p {
+  flex: 1;
+
+  line-height: 30px;
+}
+
+.about .content-section p span {
+  font-weight: 600;
+}
+
+.about-photo {
+  width: 870px;
+  height: 580px;
+
+  background-image: url(../assets/about-photo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  margin-left: 60px;
+
+  flex: 1;
+
+  background-color: var(--grey-color);
+}
+
+/************************************ AWARDS ************************************/
+
+.awards {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 60px 243px 60px 243px;
+  margin-bottom: 60px;
+
+  background-color: var(--grey-color);
+  box-shadow: 0px 10px 5px var(--grey-color), 0px -10px 5px var(--grey-color);
+}
+
+.award {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.award h1,
+.award h2 {
+  color: var(--awards-color);
+  font-weight: 500;
+
+  transition: color 0.6s;
+}
+
+.award-icon svg {
+  width: 148.2705px;
+  height: 148.2705px;
+
+  color: var(--awards-color);
+
+  transition: color 0.6s;
+}
+
+.award1:hover .award-icon1 svg,
+.award1:hover h1,
+.award1:hover h2 {
+  color: #ffd700;
+}
+
+.award2:hover .award-icon2 svg,
+.award2:hover h1,
+.award2:hover h2 {
+  color: #e5e4e2;
+}
+
+.award3:hover .award-icon3 svg,
+.award3:hover h1,
+.award3:hover h2 {
+  color: #b9f2ff;
+}
+
+.award h1 {
+  margin: 30px 0 30px 0;
+}
+
+/************************************ FEATURED ARTISTS ************************************/
+
+.featured-artists {
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.featured-artists .content-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-artists-row {
+  display: flex;
+  justify-content: center;
+}
+
+.featured-artists-row1 {
+  margin-bottom: 100px;
+}
+
+.featured-artist {
+  position: relative;
+  width: 550px;
+  height: 413px;
+  margin: auto;
+  overflow: hidden;
+
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+}
+
+.featured-artist2,
+.featured-artist5 {
+  margin: 0 100px 0 100px;
+}
+
+.featured-artist .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.featured-artist:hover .content-overlay {
+  opacity: 1;
+}
+
+.content-image {
+  width: 100%;
+  height: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.featured-artist:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-top {
+  top: 20%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 60px;
+}
+
+.button-container button {
+  margin-left: 30px;
+}
+
+.button-container2 {
+  display: none;
+}
+
+/************************************ NEW VIDEOS ************************************/
+
+.new-videos {
+  display: flex;
+  justify-content: space-between;
+
+  box-shadow: 0px 10px 5px var(--grey-color), 0px -10px 5px var(--grey-color);
+  background-color: var(--grey-color);
+
+  margin-bottom: 60px;
+}
+
+.video-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 60px 69px 60px 69px;
+}
+
+.video-title .name {
+  font-size: 1.5em;
+
+  margin: 30px 0 30px 0;
+}
+
+.video-thumbnail {
+  height: 600px;
+  width: 55%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  padding: 60px;
+}
+
+.video-thumbnail1 {
+  background-image: url(../assets/video-thumbnail1.png);
+}
+
+.slider-video ul {
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  list-style-type: none;
+}
+
+.slider-video ul li {
+  width: 10px;
+  height: 10px;
+
+  display: inline-block;
+
+  margin: 10px 0 10px 0;
+
+  background-color: var(--white-color);
+  border-radius: 100%;
+}
+
+.slider-video ul li.active {
+  background-color: var(--yellow-color);
+}
+
+/************************************ INSTALLATIONS ************************************/
+
+.installations {
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.installations-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.installations-row1 {
+  margin-bottom: 60px;
+}
+
+.installations-row p {
+  flex: 1;
+
+  line-height: 30px;
+}
+
+.installations-photo {
+  width: 870px;
+  height: 580px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  flex: 1;
+
+  background-color: grey;
+}
+
+.installations-photo1 {
+  background-image: url(../assets/installations-photo1.png);
+
+  margin-left: 60px;
+}
+
+.installations-photo2 {
+  background-image: url(../assets/installations-photo2.png);
+
+  margin-right: 60px;
+}
+
+/************************************ ARTISTS ************************************/
+
+.artists {
+  margin-bottom: 60px;
+}
+
+.artists .title-section {
+  padding: 60px 60px 0 60px;
+}
+
+.artists-genres-nav {
+  padding: 30px 60px 30px 60px;
+
+  background-color: var(--grey-color);
+}
+
+.artists-genres-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.artists-genres-nav li {
+  color: var(--yellow-color);
+  text-transform: uppercase;
+  font-size: 2.25em;
+}
+
+.artists .content-section {
+  display: flex;
+  flex-direction: column;
+
+  padding: 60px;
+  margin-top: 60px;
+}
+
+.artists-row {
+  display: flex;
+  justify-content: center;
+}
+
+.artists-row1 {
+  margin-bottom: 100px;
+}
+
+.artist {
+  position: relative;
+  width: 550px;
+  height: 413px;
+  margin: auto;
+  overflow: hidden;
+
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+}
+
+.artist2,
+.artist5 {
+  margin: 0 100px 0 100px;
+}
+
+.artist .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.artist:hover .content-overlay {
+  opacity: 1;
+}
+
+.artist:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+/************************************ ARTISTS NUMBERS ************************************/
+
+.artist-numbers {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 60px 243px 60px 243px;
+  margin-bottom: 60px;
+
+  background-color: var(--grey-color);
+  box-shadow: 0px 10px 5px var(--grey-color), 0px -10px 5px var(--grey-color);
+}
+
+.number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number h1 {
+  margin-bottom: 30px;
+}
+
+/************************************ PLAYLISTS ************************************/
+
+.playlists {
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.playlists-nav {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+}
+
+.playlists-photo {
+  width: 275px;
+  height: 275px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.playlists-photo1 {
+  background-image: url(../assets/playlist-photo1.jpg);
+}
+
+.playlists-photo2 {
+  background-image: url(../assets/playlist-photo2.jpg);
+}
+
+.playlists-photo3 {
+  background-image: url(../assets/playlist-photo3.jpg);
+}
+
+.playlists-photo4 {
+  background-image: url(../assets/playlist-photo4.jpg);
+}
+
+.playlists-photo5 {
+  background-image: url(../assets/playlist-photo5.jpg);
+}
+
+.playlists-photo6 {
+  background-image: url(../assets/playlist-photo6.jpg);
+}
+
+.song {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 30px 12px 30px;
+}
+
+.song-bg-light {
+  background-color: var(--grey-color);
+}
+
+.song-bg-dark {
+  background-color: var(--partners-color);
+}
+
+.song-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.song-play {
+  width: 0;
+  height: 0;
+
+  border-top: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-left: calc(2 * 12px * 0.866) solid var(--yellow-color);
+  border-bottom: 12px solid transparent;
+
+  visibility: hidden;
+}
+
+.song.active .song-play {
+  visibility: visible;
+}
+
+.song-photo {
+  width: 48px;
+  height: 48px;
+
+  margin: 0 51px 0 51px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.song-photo1 {
+  background-image: url(../assets/playlist-song-photo1.jpg);
+}
+
+.song-photo2 {
+  background-image: url(../assets/playlist-song-photo2.jpg);
+}
+
+.song-photo3 {
+  background-image: url(../assets/playlist-song-photo3.jpg);
+}
+
+.song-photo4 {
+  background-image: url(../assets/playlist-song-photo4.jpg);
+}
+
+.song-photo5 {
+  background-image: url(../assets/playlist-song-photo5.jpg);
+}
+
+.song-photo6 {
+  background-image: url(../assets/playlist-song-photo6.jpg);
+}
+
+.song-photo7 {
+  background-image: url(../assets/playlist-song-photo7.jpg);
+}
+
+.song-photo8 {
+  background-image: url(../assets/playlist-song-photo8.jpg);
+}
+
+.song-photo9 {
+  background-image: url(../assets/playlist-song-photo9.jpg);
+}
+
+.song-photo10 {
+  background-image: url(../assets/playlist-song-photo10.jpg);
+}
+
+.song-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.song-artist {
+  position: absolute;
+  left: 50%;
+}
+
+.song-duration {
+  margin: 0 51px 0 51px;
+}
+
+/************************************ PLAYLISTS NUMBERS ************************************/
+
+.playlists-numbers {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 60px 243px 60px 243px;
+  margin-bottom: 60px;
+
+  background-color: var(--grey-color);
+  box-shadow: 0px 10px 5px var(--grey-color), 0px -10px 5px var(--grey-color);
+}
+
+/************************************ EVENTS ************************************/
+
+.events {
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.events .content-section {
+  display: flex;
+
+  padding: 0 60px 0 60px;
+}
+
+.events-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.events-column2 {
+  margin-left: 90px;
+}
+
+.event {
+  display: flex;
+
+  padding: 10px;
+  margin-bottom: 30px;
+
+  border: 0.5px solid var(--grey-color);
+}
+
+.event5,
+.event10 {
+  margin: 0;
+}
+
+.event-date {
+  width: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 15px 30px 15px 30px;
+  margin-right: 10px;
+
+  background-color: var(--black-color);
+}
+
+.event-date span {
+  padding-bottom: 15px;
+
+  font-size: 5em;
+}
+
+.event-info {
+  width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 15px 30px 15px 30px;
+
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
+
+.event-info span {
+  margin-bottom: 15px;
+
+  font-size: 2em;
+}
+
+.event-info a {
+  color: var(--black-color);
+  font-size: 1.3em;
+}
+
+.event-location {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.event-location .location-icon {
+  width: 20px;
+  height: 20px;
+
+  margin-right: 5px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../assets/events-location-icon.svg);
+}
+
+/************************************ MERCHANDISING ************************************/
+
+.merchandising {
+  margin-bottom: 60px;
+}
+
+.new-products-banner-container {
+  overflow: hidden;
+}
+
+.new-products-banner-wrapper {
+  display: flex;
+
+  animation: slide 16s infinite;
+}
+
+.new-products-banner {
+  height: 634.328px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  70% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-400%);
+  }
+  90% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+.slider-merchandising {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.slider-merchandising ul {
+  width: 20%;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 60px;
+
+  list-style-type: none;
+}
+
+.slider-merchandising ul li {
+  width: 15px;
+  height: 15px;
+
+  display: inline-block;
+
+  border-radius: 100%;
+
+  background-color: var(--white-color);
+}
+
+.slider-merchandising ul li.active {
+  background-color: var(--yellow-color);
+}
+
+.merchandising-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 60px 30px 60px 30px;
+}
+
+.product-category {
+  width: 500px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px;
+
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
+
+.product-category-icon {
+  margin-bottom: 30px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.product-category-icon1 {
+  width: 150px;
+  height: 150px;
+
+  background-image: url(../assets/product-category-icon1.svg);
+}
+
+.product-category-icon2 {
+  width: 150px;
+  height: 150px;
+
+  background-image: url(../assets/product-category-icon2.svg);
+}
+
+.product-category-icon3 {
+  width: 150px;
+  height: 150px;
+
+  background-image: url(../assets/product-category-icon3.svg);
+}
+
+.product-category h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.merchandising .content-section {
+  padding: 60px 90px 60px 90px;
+}
+
+.products-row {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+}
+
+.products-row5 {
+  margin: 0;
+}
+
+.product-image {
+  width: 500px;
+  height: 500px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--white-color);
+}
+
+.product-image1 {
+  background-image: url(../assets/merchandising-product-image1.jpg);
+}
+
+.product-image2 {
+  background-image: url(../assets/merchandising-product-image2.jpg);
+}
+
+.product-image3 {
+  background-image: url(../assets/merchandising-product-image3.jpg);
+}
+
+.product-image4 {
+  background-image: url(../assets/merchandising-product-image4.jpg);
+}
+
+.product-image5 {
+  background-image: url(../assets/merchandising-product-image5.jpg);
+}
+
+.product-image6 {
+  background-image: url(../assets/merchandising-product-image6.jpg);
+}
+
+.product-image7 {
+  background-image: url(../assets/merchandising-product-image7.jpg);
+}
+
+.product-image8 {
+  background-image: url(../assets/merchandising-product-image8.jpg);
+}
+
+.product-image9 {
+  background-image: url(../assets/merchandising-product-image9.jpg);
+}
+
+.product-image10 {
+  background-image: url(../assets/merchandising-product-image10.jpg);
+}
+
+.product-image11 {
+  background-image: url(../assets/merchandising-product-image11.jpg);
+}
+
+.product-image12 {
+  background-image: url(../assets/merchandising-product-image12.jpg);
+}
+
+.product-image13 {
+  background-image: url(../assets/merchandising-product-image13.jpg);
+}
+
+.product-image14 {
+  background-image: url(../assets/merchandising-product-image14.jpg);
+}
+
+.product-image15 {
+  background-image: url(../assets/merchandising-product-image15.jpg);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 30px;
+
+  background-color: var(--grey-color);
+}
+
+.product-description {
+  margin: 15px 0 15px 0;
+}
+
+/************************************ CONTACT ************************************/
+
+.contact {
+  padding: 60px;
+}
+
+.contact-container {
+  display: flex;
+}
+
+.contact-fields {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.contact-fields-row {
+  display: flex;
+
+  margin-bottom: 30px;
+}
+
+.contact-fields-row input {
+  width: 100%;
+  height: 59px;
+
+  padding-left: 15px;
+
+  font-size: 1.1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.contact-fields-row #last-name,
+.contact-fields-row #phone {
+  margin-left: 30px;
+}
+
+.contact-fields textarea {
+  height: 206px;
+
+  padding: 15px;
+  margin-bottom: 30px;
+
+  font-size: 1.1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+
+  resize: none;
+}
+
+.contact-fields-button {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-fields-button button {
+  width: 100%;
+
+  border-radius: 0%;
+  text-transform: uppercase;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2;
+
+  padding: 90px 60px 90px 60px;
+  margin-left: 60px;
+
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
+
+.contact-methods-container {
+  display: flex;
+  align-items: center;
+}
+
+.contact-methods-container p {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.contact-methods-icon {
+  width: 50px;
+  height: 50px;
+
+  margin-right: 60px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contact-methods-icon.phone-icon {
+  background-image: url(../assets/contact-phone-icon.svg);
+}
+
+.contact-methods-icon.email-icon {
+  background-image: url(../assets/contact-email-icon.svg);
+}
+
+.contact-methods-icon.location-icon {
+  background-image: url(../assets/contact-location-icon.svg);
+}
+
+/************************************ LOCATION ************************************/
+
+.location {
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.location .section-description {
+  margin-bottom: 60px;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+/************************************ PARTNERS ************************************/
+
+.partners {
+  padding: 60px 120px 60px 120px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--partners-color);
+}
+
+.partner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.partner1 {
+  width: 175.0229px;
+  height: 98.6579px;
+
+  background-image: url(../assets/partners-partner1.png);
+}
+
+.partner2 {
+  width: 78.1369px;
+  height: 123.6941px;
+
+  background-image: url(../assets/partners-partner2.png);
+}
+
+.partner3 {
+  width: 116.4324px;
+  height: 116.3501px;
+
+  background-image: url(../assets/partners-partner3.png);
+}
+
+.partner4 {
+  width: 101.6448px;
+  height: 103.6291px;
+
+  background-image: url(../assets/partners-partner4.png);
+}
+
+/************************************ FOOTER ************************************/
+
+.footer-sections {
+  padding: 90px 60px 90px 60px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--footer-color);
+}
+
+.footer-section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-sections h2 {
+  margin-bottom: 47px;
+
+  text-transform: uppercase;
+  color: var(--yellow-color);
+}
+
+.footer-social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media-icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-media-icon1 {
+  width: 50.0778px;
+  height: 41px;
+
+  background-image: url(../assets/footer-social-media-icon1.png);
+}
+
+.social-media-icon2 {
+  width: 54px;
+  height: 54px;
+
+  background-image: url(../assets/footer-social-media-icon2.png);
+}
+
+.social-media-icon3 {
+  width: 46.4603px;
+  height: 46.4603px;
+
+  background-image: url(../assets/footer-social-media-icon3.png);
+}
+
+.social-media-icon4 {
+  width: 62px;
+  height: 62px;
+
+  background-image: url(../assets/footer-social-media-icon4.png);
+}
+
+.footer-sections li {
+  font-size: 1.3em;
+
+  margin-bottom: 39px;
+}
+
+.footer-sections li:last-child {
+  margin: 0;
+}
+
+.footer-section4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section4 input {
+  padding-bottom: 10px;
+
+  border: none;
+  color: var(--white-color);
+  background-color: var(--footer-color);
+  border-bottom: 1px solid var(--white-color);
+
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+
+  margin-bottom: 57px;
+}
+
+.footer-section4 input::placeholder {
+  color: var(--white-color);
+}
+
+.footer-section4 button {
+  width: 100%;
+
+  border-radius: 0%;
+}
+
+.footer-copy {
+  padding: 47px 60px 47px 60px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  background-color: var(--footer-color);
+  border-top: 1px solid var(--white-color);
+  color: var(--white-color);
+}
+
+/************************************ ADDITIONALS MEDIA QUERIES ************************************/
+
+@media screen and (min-width: 1331px) and (max-width: 1860px) {
+  /************************************ COMMON STYLES ************************************/
+
+  .minilogo {
+    font-size: 18px;
+  }
+
+  .regular-nav li {
+    font-size: 1.2em;
+  }
+
+  /************************************ HERO ************************************/
+
+  .hero {
+    background-position: right center;
+  }
+
+  /************************************ AWARDS ************************************/
+
+  .awards {
+    padding: 60px;
+  }
+
+  /************************************ FEATURED ARTISTS ************************************/
+
+  .featured-artist {
+    width: 380px;
+    height: 290px;
+  }
+
+  .featured-artist2,
+  .featured-artist5 {
+    margin: 0 30px 0 30px;
+  }
+
+  /************************************ ARTISTS ************************************/
+
+  .artist {
+    width: 380px;
+    height: 290px;
+  }
+
+  .artist2,
+  .artist5 {
+    margin: 0 30px 0 30px;
+  }
+
+  /************************************ ARTISTS NUMBERS ************************************/
+
+  .artist-numbers {
+    padding: 60px;
+  }
+
+  /************************************ PLAYLISTS ************************************/
+
+  .playlists {
+    padding: 30px;
+  }
+
+  .playlists-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  /************************************ PLAYLISTS NUMBERS ************************************/
+
+  .playlists-numbers {
+    padding: 60px;
+  }
+
+  /************************************ EVENTS ************************************/
+
+  .events .content-section {
+    justify-content: center;
+  }
+
+  .events-column2 {
+    margin-left: 60px;
+  }
+
+  .event-info {
+    width: 300px;
+  }
+
+  /************************************ MERCHANDISING ************************************/
+
+  .product-category {
+    width: 350px;
+  }
+
+  .merchandising .content-section {
+    padding: 30px;
+  }
+
+  .product-image {
+    width: 400px;
+    height: 400px;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
+
+  /************************************ CONTACT ************************************/
+
+  .contact-methods {
+    padding: 60px;
+  }
+
+  .contact-methods-container p {
+    font-size: 1.3em;
+  }
+
+  .contact-fields-row input,
+  .contact-fields textarea {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1120px) and (max-width: 1330px) {
+  /************************************ COMMON STYLES ************************************/
+
+  p {
+    font-size: 1em;
+  }
+
+  .minilogo {
+    font-size: 15px;
+  }
+
+  .regular-nav li {
+    font-size: 1.2em;
+  }
+
+  /************************************ HERO ************************************/
+
+  .hero {
+    background-position: right center;
+  }
+
+  .legend {
+    margin: 220px 500px 0 0;
+  }
+
+  .legend h1 {
+    font-size: 3.5em;
+  }
+
+  /************************************ ABOUT ************************************/
+
+  .about .content-section p {
+    line-height: 23px;
+  }
+
+  .about-photo {
+    width: 435px;
+    height: 290px;
+  }
+
+  /************************************ AWARDS ************************************/
+
+  .awards {
+    padding: 60px;
+  }
+
+  /************************************ FEATURED ARTISTS ************************************/
+
+  .featured-artists {
+    padding: 30px;
+  }
+
+  .featured-artist {
+    width: 340px;
+    height: 250px;
+  }
+
+  .featured-artist2,
+  .featured-artist5 {
+    margin: 0 10px 0 10px;
+  }
+
+  /************************************ NEW VIDEOS ************************************/
+
+  .video-title h2 {
+    font-size: 2.1em;
+  }
+
+  .video-title .name {
+    font-size: 1.3em;
+  }
+
+  .video-thumbnail1 {
+    height: 480px;
+  }
+
+  /************************************ INSTALLATIONS ************************************/
+
+  .installations-row p {
+    line-height: 23px;
+  }
+
+  .installations-photo {
+    width: 435px;
+    height: 290px;
+  }
+
+  /************************************ ARTISTS ************************************/
+
+  .artists .title-section {
+    padding: 30px 30px 0 30px;
+  }
+
+  .artists .content-section {
+    padding: 30px;
+  }
+
+  .artist {
+    width: 340px;
+    height: 250px;
+  }
+
+  .artist2,
+  .artist5 {
+    margin: 0 10px 0 10px;
+  }
+
+  /************************************ ARTISTS NUMBERS ************************************/
+
+  .artist-numbers {
+    padding: 60px;
+  }
+
+  /************************************ PLAYLISTS ************************************/
+
+  .playlists {
+    padding: 30px;
+  }
+
+  .playlists-photo {
+    width: 170px;
+    height: 170px;
+  }
+
+  /************************************ PLAYLISTS NUMBERS ************************************/
+
+  .playlists-numbers {
+    padding: 60px;
+  }
+
+  /************************************ EVENTS ************************************/
+
+  .events .content-section {
+    justify-content: center;
+  }
+
+  .events-column2 {
+    margin-left: 60px;
+  }
+
+  .event-info {
+    width: 200px;
+  }
+
+  .event-info span {
+    font-size: 1.7em;
+  }
+
+  /************************************ MERCHANDISING ************************************/
+
+  .merchandising .content-section {
+    padding: 30px;
+  }
+
+  .product-category {
+    width: 280px;
+  }
+
+  .product-image {
+    width: 320px;
+    height: 320px;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
+
+  /************************************ CONTACT ************************************/
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-fields {
+    margin-bottom: 60px;
+
+    flex: none;
+  }
+
+  .contact-methods {
+    margin: 0;
+
+    flex: none;
+  }
+
+  .contact-methods-container2 {
+    margin: 30px 0 30px 0;
+  }
+
+  .contact-methods-container3 br {
+    display: none;
+  }
+}
+
+/************************************ MEDIA QUERY - TABLET ************************************/
+
+@media screen and (min-width: 970px) and (max-width: 1121px) {
+  /************************************ COMMON STYLES ************************************/
+
+  p {
+    font-size: 1em;
+  }
+
+  header {
+    padding: 30px;
+  }
+
+  .minilogo {
+    font-size: 13px;
+  }
+
+  .regular-nav li {
+    font-size: 1.1em;
+  }
+
+  /************************************ HERO ************************************/
+
+  .hero {
+    background-position: right center;
+  }
+
+  .legend {
+    margin: 350px 500px 0 0;
+  }
+
+  .legend h1 {
+    font-size: 3.3em;
+  }
+
+  /************************************ ABOUT ************************************/
+
+  .about .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about .content-section p {
+    flex: none;
+    line-height: 22px;
+  }
+
+  .about-photo {
+    width: 600px;
+    height: 400px;
+
+    flex: none;
+
+    margin: 0;
+    margin-top: 60px;
+  }
+
+  /************************************ AWARDS ************************************/
+
+  .awards {
+    padding: 30px;
+  }
+
+  .award h1 {
+    font-size: 2.8em;
+  }
+
+  .award h2 {
+    font-size: 2.1em;
+  }
+
+  .award-icon1 svg,
+  .award1 h1,
+  .award1 h2 {
+    color: #ffd700;
+  }
+
+  .award-icon2 svg,
+  .award2 h1,
+  .award2 h2 {
+    color: #e5e4e2;
+  }
+
+  .award-icon3 svg,
+  .award3 h1,
+  .award3 h2 {
+    color: #b9f2ff;
+  }
+
+  /************************************ FEATURED ARTISTS ************************************/
+
+  .featured-artists {
+    padding: 30px;
+  }
+
+  .featured-artists .content-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .featured-artists-row {
+    flex-direction: column;
+  }
+
+  .featured-artists-row1 {
+    margin: 0;
+    margin-left: 60px;
+  }
+
+  .featured-artists-row2 {
+    margin-right: 60px;
+  }
+
+  .featured-artist {
+    width: 340px;
+    height: 250px;
+  }
+
+  .featured-artist2,
+  .featured-artist5 {
+    margin: 30px 0 30px 0;
+  }
+
+  .button-container1 {
+    display: none;
+  }
+
+  .button-container2 {
+    display: flex;
+  }
+
+  /************************************ NEW VIDEOS ************************************/
+
+  .video-title h2 {
+    font-size: 2.1em;
+  }
+
+  .video-title .name {
+    font-size: 1.3em;
+  }
+
+  .video-thumbnail1 {
+    height: 430px;
+  }
+
+  /************************************ INSTALLATIONS ************************************/
+
+  .installations-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .installations-row p {
+    flex: none;
+    line-height: 22px;
+  }
+
+  .installations-photo {
+    width: 600px;
+    height: 400px;
+
+    flex: none;
+
+    margin: 0;
+    margin-top: 60px;
+  }
+
+  .installations-photo1 {
+    margin: 0;
+    margin-top: 60px;
+  }
+
+  .installations-photo2 {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  /************************************ ARTISTS ************************************/
+
+  .artists .title-section {
+    padding: 30px 30px 0 30px;
+  }
+
+  .artists-genres-nav {
+    padding: 30px;
+  }
+
+  .artists .content-section {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 30px;
+  }
+
+  .artists-row {
+    flex-direction: column;
+  }
+
+  .artists-row1 {
+    margin: 0;
+    margin-left: 60px;
+  }
+
+  .artists-row2 {
+    margin-right: 60px;
+  }
+
+  .artist {
+    width: 340px;
+    height: 250px;
+  }
+
+  .artist2,
+  .artist5 {
+    margin: 30px 0 30px 0;
+  }
+
+  /************************************ ARTISTS NUMBERS ************************************/
+
+  .artist-numbers {
+    padding: 30px;
+  }
+
+  .number h1 {
+    font-size: 2.8em;
+  }
+
+  .number h2 {
+    font-size: 2.1em;
+  }
+
+  /************************************ PLAYLISTS ************************************/
+
+  .playlists {
+    padding: 30px;
+  }
+
+  .playlists-photo {
+    width: 145px;
+    height: 145px;
+  }
+
+  .song-photo,
+  .song-duration {
+    margin: 0 25.5px 0 25.5px;
+  }
+
+  /************************************ PLAYLISTS NUMBERS ************************************/
+
+  .playlists-numbers {
+    padding: 30px;
+  }
+
+  /************************************ EVENTS ************************************/
+
+  .events .content-section {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .events-column2 {
+    margin-left: 0;
+  }
+
+  .event-info {
+    width: 100%;
+  }
+
+  /************************************ MERCHANDISING ************************************/
+
+  .merchandising .content-section {
+    padding: 30px;
+  }
+
+  .product-category {
+    width: 230px;
+  }
+
+  .product-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
+
+  /************************************ CONTACT ************************************/
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-fields {
+    margin-bottom: 60px;
+
+    flex: none;
+  }
+
+  .contact-methods {
+    margin: 0;
+
+    flex: none;
+  }
+
+  .contact-methods-container2 {
+    margin: 30px 0 30px 0;
+  }
+
+  .contact-methods-container3 br {
+    display: none;
+  }
+
+  /************************************ FOOTER ************************************/
+
+  .footer-sections {
+    padding: 30px;
+  }
+
+  .footer-sections h2 {
+    font-size: 1.8em;
+  }
+
+  .social-media-icon1 {
+    width: 30.0778px;
+    height: 21px;
+  }
+
+  .social-media-icon2 {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-media-icon3 {
+    width: 26.4603px;
+    height: 26.4603px;
+  }
+
+  .social-media-icon4 {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/************************************ MEDIA QUERY - MOBILE ************************************/
+
+@media screen and (max-width: 969px) {
+  /************************************ COMMON STYLES ************************************/
+
+  p {
+    font-size: 1em;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px;
+  }
+
+  .logo,
+  .nav {
+    flex: none;
+  }
+
+  .minilogo {
+    font-size: 13px;
+  }
+
+  .regular-nav {
+    display: none;
+  }
+
+  .collapsed-nav {
+    display: block;
+  }
+
+  /************************************ HERO ************************************/
+
+  .hero {
+    background-position: 75% 50%;
+  }
+
+  .legend {
+    margin: 380px 100px 0 0;
+  }
+
+  .legend h1 {
+    font-size: 2.3em;
+  }
+
+  /************************************ ABOUT ************************************/
+
+  .about {
+    padding: 30px;
+  }
+
+  .about .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about .content-section p {
+    flex: none;
+    line-height: 22px;
+  }
+
+  .about-photo {
+    width: 400px;
+    height: 250px;
+
+    flex: none;
+
+    margin: 0;
+    margin-top: 60px;
+  }
+
+  /************************************ AWARDS ************************************/
+
+  .awards {
+    flex-direction: column;
+
+    padding: 30px;
+  }
+
+  .award h1 {
+    font-size: 2.8em;
+  }
+
+  .award h2 {
+    font-size: 2.1em;
+  }
+
+  .award2 {
+    margin: 60px 0 60px 0;
+  }
+
+  .award-icon1 svg,
+  .award1 h1,
+  .award1 h2 {
+    color: #ffd700;
+  }
+
+  .award-icon2 svg,
+  .award2 h1,
+  .award2 h2 {
+    color: #e5e4e2;
+  }
+
+  .award-icon3 svg,
+  .award3 h1,
+  .award3 h2 {
+    color: #b9f2ff;
+  }
+
+  /************************************ FEATURED ARTISTS ************************************/
+
+  .featured-artists {
+    padding: 30px;
+  }
+
+  .featured-artists-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featured-artists-row1 {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .featured-artist {
+    width: 380px;
+    height: 290px;
+  }
+
+  .featured-artist2,
+  .featured-artist5 {
+    margin: 30px 0 30px 0;
+  }
+
+  /************************************ NEW VIDEOS ************************************/
+
+  .new-videos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-title h2 {
+    font-size: 2.1em;
+  }
+
+  .video-title .name {
+    font-size: 1.3em;
+  }
+
+  .video-thumbnail1 {
+    width: 73%;
+    height: 300px;
+
+    background-position: center top;
+  }
+
+  /************************************ INSTALLATIONS ************************************/
+
+  .installations {
+    padding: 30px;
+  }
+
+  .installations-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .installations-row p {
+    flex: none;
+    line-height: 22px;
+  }
+
+  .installations-photo {
+    width: 400px;
+    height: 250px;
+
+    flex: none;
+
+    margin: 0;
+    margin-top: 60px;
+  }
+
+  .installations-photo1 {
+    margin: 0;
+    margin-top: 60px;
+  }
+
+  .installations-photo2 {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  /************************************ ARTISTS ************************************/
+
+  .artists .title-section {
+    padding: 30px 30px 0 30px;
+  }
+
+  .artists-genres-nav {
+    padding: 30px 10px 30px 10px;
+  }
+
+  .artists-genres-nav li {
+    font-size: 1.2em;
+  }
+
+  .artists .content-section {
+    padding: 30px;
+    margin-top: 30px;
+  }
+
+  .artists-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artists-row1 {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .artist {
+    width: 380px;
+    height: 290px;
+  }
+
+  .artist2,
+  .artist5 {
+    margin: 30px 0 30px 0;
+  }
+
+  /************************************ ARTISTS NUMBERS ************************************/
+
+  .artist-numbers {
+    flex-direction: column;
+
+    padding: 30px;
+  }
+
+  .number2 {
+    margin: 60px 0 60px 0;
+  }
+
+  .number h1 {
+    font-size: 2.8em;
+  }
+
+  .number h2 {
+    font-size: 2.1em;
+  }
+
+  /************************************ PLAYLISTS ************************************/
+
+  .playlists {
+    padding: 30px;
+  }
+
+  .playlists-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .playlists-photo1,
+  .playlists-photo2,
+  .playlists-photo3,
+  .playlists-photo4,
+  .playlists-photo5 {
+    margin-bottom: 30px;
+  }
+
+  .song-photo,
+  .song-duration {
+    margin: 0 10px 0 10px;
+  }
+
+  .song-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .song-artist {
+    position: relative;
+    left: 0;
+
+    margin-top: 10px;
+  }
+
+  /************************************ PLAYLISYS NUMBERS ************************************/
+
+  .playlists-numbers {
+    flex-direction: column;
+
+    padding: 30px;
+  }
+
+  /************************************ EVENTS ************************************/
+
+  .events .content-section {
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 0;
+  }
+
+  .events-column2 {
+    margin-left: 0;
+  }
+
+  .event-date {
+    justify-content: center;
+  }
+
+  .event-date span {
+    font-size: 4em;
+  }
+
+  .event-date h2 {
+    font-size: 2.2em;
+  }
+
+  .event-info {
+    width: 100%;
+  }
+
+  .event-info span {
+    font-size: 1.3em;
+  }
+
+  /************************************ MERCHANDISING ************************************/
+
+  .merchandising-nav {
+    flex-direction: column;
+
+    margin: 60px;
+  }
+
+  .product-category {
+    width: 350px;
+  }
+
+  .product-category2 {
+    margin: 30px 0 30px 0;
+  }
+
+  .merchandising .content-section {
+    padding: 30px;
+  }
+
+  .products-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 60px;
+  }
+
+  .product1,
+  .product2,
+  .product4,
+  .product5,
+  .product7,
+  .product8,
+  .product10,
+  .product11 {
+    margin-bottom: 60px;
+  }
+
+  .product-image {
+    width: 400px;
+    height: 400px;
+  }
+
+  /************************************ CONTACT ************************************/
+
+  .contact {
+    padding: 30px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-fields {
+    margin-bottom: 60px;
+
+    flex: none;
+  }
+
+  .contact-fields-row {
+    flex-direction: column;
+  }
+
+  .contact-fields-row input {
+    width: 96%;
+  }
+
+  .contact-fields-row #first-name,
+  .contact-fields-row #email {
+    margin-bottom: 30px;
+  }
+
+  .contact-fields-row #last-name,
+  .contact-fields-row #phone {
+    margin: 0;
+  }
+
+  .contact-methods {
+    padding: 30px;
+    margin: 0;
+
+    flex: none;
+  }
+
+  .contact-methods-container2 {
+    margin: 30px 0 30px 0;
+  }
+
+  .contact-methods-container p {
+    font-size: 1.1em;
+  }
+
+  .contact-methods-icon {
+    margin-right: 30px;
+  }
+
+  /************************************ LOCATION ************************************/
+
+  .location {
+    padding: 30px;
+  }
+
+  .map iframe {
+    width: 100%;
+  }
+
+  /************************************ PARTNERS ************************************/
+
+  .partners {
+    padding: 30px 5px 30px 5px;
+  }
+
+  .partner1 {
+    width: 140px;
+    height: 73px;
+  }
+
+  .partner2 {
+    width: 53px;
+    height: 98px;
+  }
+
+  .partner3 {
+    width: 91px;
+    height: 91px;
+  }
+
+  .partner4 {
+    width: 76px;
+    height: 78px;
+  }
+
+  /************************************ FOOTER ************************************/
+
+  .footer-sections {
+    flex-direction: column;
+
+    padding: 30px;
+  }
+
+  .footer-sections h2 {
+    font-size: 1.8em;
+  }
+
+  .footer-section1,
+  .footer-section2,
+  .footer-section3 {
+    text-align: center;
+
+    margin-bottom: 50px;
+  }
+
+  .footer-section1 .minilogo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-section4 {
+    text-align: center;
+  }
+
+  .footer-social-media {
+    margin-top: 30px;
+  }
+
+  .social-media-icon1 {
+    width: 30.0778px;
+    height: 21px;
+  }
+
+  .social-media-icon2 {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-media-icon3 {
+    width: 26.4603px;
+    height: 26.4603px;
+  }
+
+  .social-media-icon4 {
+    width: 42px;
+    height: 42px;
+  }
+}

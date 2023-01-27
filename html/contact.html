@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Thunder Records</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="secondary-header">
+      <div class="logo">
+        <div class="minilogo">
+          <h1><a href="index.html">Thunder Records</a></h1>
+        </div>
+      </div>
+      <div class="nav">
+        <ul class="regular-nav">
+          <li class="item item1">
+            <a href="index.html">home</a>
+          </li>
+          <li class="item item2">
+            <a href="artists.html">artists</a>
+          </li>
+          <li class="item item3">
+            <a href="artists.html#playlists">playlists</a>
+          </li>
+          <li class="item item4">
+            <a href="artists.html#events">events</a>
+          </li>
+          <li class="item item5">
+            <a href="merchandising.html">merchandising</a>
+          </li>
+          <li class="item item6">
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+        <div class="collapsed-nav" onclick="collapsed()">
+          <ul id="collapsed" class="collapsed-content">
+            <li><a href="index.html">home</a></li>
+            <li><a href="artists.html">artists</a></li>
+            <li><a href="artists.html#playlists">playlists</a></li>
+            <li><a href="artists.html#events">events</a></li>
+            <li><a href="merchandising.html">merchandising</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="contact" id="contact">
+      <div class="title-section">
+        <h1>Contact</h1>
+        <h2>how to contact us</h2>
+      </div>
+      <div class="content-section">
+        <div class="contact-container">
+          <div class="contact-fields">
+            <div class="contact-fields-row contact-fields-row1">
+              <input type="text" id="first-name" placeholder="First Name*" />
+              <input type="text" id="last-name" placeholder="Last Name*" />
+            </div>
+            <div class="contact-fields-row contact-fields-row2">
+              <input type="text" id="email" placeholder="Email*" />
+              <input type="text" id="phone" placeholder="Phone*" />
+            </div>
+            <textarea id="message" placeholder="Message*"></textarea>
+            <div class="contact-fields-button">
+              <button>submit</button>
+            </div>
+          </div>
+          <div class="contact-methods">
+            <div class="contact-methods-container contact-methods-container1">
+              <div class="contact-methods-icon phone-icon"></div>
+              <p>+358 44 272 0667</p>
+            </div>
+            <div class="contact-methods-container contact-methods-container2">
+              <div class="contact-methods-icon email-icon"></div>
+              <p>thunderrecords@contact.com</p>
+            </div>
+            <div class="contact-methods-container contact-methods-container3">
+              <div class="contact-methods-icon location-icon"></div>
+              <p>Keuruuntie 1388, 35990<br />Mänttä-Vilppula (Finland)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="location" id="location">
+      <div class="title-section">
+        <h1>Location</h1>
+        <h2>where to find us</h2>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/d/u/0/embed?mid=1JgOAXwTS_BtGwWrSSkzpNaSDc9vViTo&ehbc=2E312F"
+          height="650"
+        ></iframe>
+      </div>
+    </section>
+    <footer>
+      <div class="partners">
+        <div class="partner partner1"></div>
+        <div class="partner partner2"></div>
+        <div class="partner partner3"></div>
+        <div class="partner partner4"></div>
+      </div>
+      <div class="footer">
+        <div class="footer-sections">
+          <div class="footer-section1">
+            <div class="minilogo">
+              <h1><a href="index.html">Thunder Records</a></h1>
+            </div>
+            <div class="footer-social-media">
+              <div class="social-media-icon social-media-icon1"></div>
+              <div class="social-media-icon social-media-icon2"></div>
+              <div class="social-media-icon social-media-icon3"></div>
+              <div class="social-media-icon social-media-icon4"></div>
+            </div>
+          </div>
+          <div class="footer-section2">
+            <h2>sections</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="artists.html">Artists</a></li>
+              <li><a href="artists.html#playlists">Playlists</a></li>
+              <li><a href="artists.html#events">Events</a></li>
+              <li><a href="merchandising.html">Merchandising</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section3">
+            <h2>support</h2>
+            <ul>
+              <li><a href="#">Conditions</a></li>
+              <li><a href="#">Cookie Statement</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+          </div>
+          <div class="footer-section4">
+            <h2>newsletter</h2>
+            <input
+              type="email"
+              id="footer-email"
+              placeholder="Enter your e-mail address"
+            />
+            <button>Sign Up</button>
+          </div>
+        </div>
+        <div class="footer-copy">
+          <p>&#169; Copyright 2023 Thunder Records, Inc.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

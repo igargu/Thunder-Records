@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Thunder Records</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="secondary-header">
+      <div class="logo">
+        <div class="minilogo">
+          <h1><a href="index.html">Thunder Records</a></h1>
+        </div>
+      </div>
+      <div class="nav">
+        <ul class="regular-nav">
+          <li class="item item1">
+            <a href="index.html">home</a>
+          </li>
+          <li class="item item2">
+            <a href="artists.html">artists</a>
+          </li>
+          <li class="item item3">
+            <a href="artists.html#playlists">playlists</a>
+          </li>
+          <li class="item item4">
+            <a href="artists.html#events">events</a>
+          </li>
+          <li class="item item5">
+            <a href="merchandising.html">merchandising</a>
+          </li>
+          <li class="item item6">
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+        <div class="collapsed-nav" onclick="collapsed()">
+          <ul id="collapsed" class="collapsed-content">
+            <li><a href="index.html">home</a></li>
+            <li><a href="artists.html">artists</a></li>
+            <li><a href="artists.html#playlists">playlists</a></li>
+            <li><a href="artists.html#events">events</a></li>
+            <li><a href="merchandising.html">merchandising</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="artists" id="artists">
+      <div class="title-section">
+        <h1>Artists</h1>
+        <h2>all our musicians</h2>
+      </div>
+      <div class="artists-genres-nav">
+        <ul>
+          <li>alternative</li>
+          <li>death</li>
+          <li>doom</li>
+          <li>progressive</li>
+        </ul>
+      </div>
+      <div class="content-section">
+        <div class="artists-row artists-row1">
+          <div class="artist artist1">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="../assets/artists-artist1.jpg" />
+            <div class="content-details fadeIn-top">
+              <a href="https://accuser.de/"><h3>Accuser</h3></a>
+              <p>Flow through various moods and styles</p>
+            </div>
+          </div>
+          <div class="artist artist2">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="../assets/artists-artist2.jpg" />
+            <div class="content-details fadeIn-top">
+              <a href="https://candiria.bandcamp.com/"><h3>Candiria</h3></a>
+              <p>The urban fusion of different music styles</p>
+            </div>
+          </div>
+          <div class="artist artist3">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="../assets/artists-artist3.jpg" />
+            <div class="content-details fadeIn-top">
+              <a href="https://mercyfulfatecoven.com/"
+                ><h3>Mercyful Fate</h3></a
+              >
+              <p>Everyday is Halloween</p>
+            </div>
+          </div>
+        </div>
+        <div class="artists-row artists-row2">
+          <div class="artist artist4">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="../assets/artists-artist4.jpg" />
+            <div class="content-details fadeIn-top">
+              <a href="https://www.facebook.com/SOILENTGREEN/"
+                ><h3>Soilent Green</h3></a
+              >
+              <p>Grindcore and Sludge fusion is fantastic</p>
+            </div>
+          </div>
+          <div class="artist artist5">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="../assets/artists-artist5.jpg" />
+            <div class="content-details fadeIn-top">
+              <a href="https://tyr.fo/"><h3>Týr</h3></a>
+              <p>
+                Ruthlessly melodic and irresistibly compelling progressive folk
+              </p>
+            </div>
+          </div>
+          <div class="artist artist6">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="../assets/artists-artist6.jpg" />
+            <div class="content-details fadeIn-top">
+              <a href="https://wakegrind.bandcamp.com/"><h3>Wake</h3></a>
+              <p>Darkness from the True North</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="artist-numbers">
+      <div class="number number1">
+        <h1>425</h1>
+        <h2>Signed Artists</h2>
+      </div>
+      <div class="number number2">
+        <h1>5436</h1>
+        <h2>Records Produced</h2>
+      </div>
+      <div class="number number3">
+        <h1>35674</h1>
+        <h2>Recorded Songs</h2>
+      </div>
+    </div>
+    <section class="playlists" id="playlists">
+      <div class="title-section">
+        <h1>Playlists</h1>
+        <h2>the best of our label</h2>
+      </div>
+      <div class="content-section">
+        <div class="playlists-nav">
+          <div class="playlists-photo playlists-photo1"></div>
+          <div class="playlists-photo playlists-photo2"></div>
+          <div class="playlists-photo playlists-photo3"></div>
+          <div class="playlists-photo playlists-photo4"></div>
+          <div class="playlists-photo playlists-photo5"></div>
+          <div class="playlists-photo playlists-photo6"></div>
+        </div>
+        <div class="playlist playlist1">
+          <div class="song song-bg-light active">
+            <div class="song-component">
+              <div
+                class="song-play"
+                onclick="playSong('volt-thrower.mp3')"
+              ></div>
+              <div class="song-photo song-photo1"></div>
+              <div class="song-info">
+                <p class="song-title">Volt Thrower</p>
+                <p class="song-artist">Conan</p>
+              </div>
+            </div>
+            <p class="song-duration">4:04</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo2"></div>
+              <div class="song-info">
+                <p class="song-title">Blood and Thunder</p>
+                <p class="song-artist">Mastodon</p>
+              </div>
+            </div>
+            <p class="song-duration">3:49</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo3"></div>
+              <div class="song-info">
+                <p class="song-title">Hearts on Fire</p>
+                <p class="song-artist">HammerFall</p>
+              </div>
+            </div>
+            <p class="song-duration">3:51</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo4"></div>
+              <div class="song-info">
+                <p class="song-title">Heidrun</p>
+                <p class="song-artist">Amon Amarth</p>
+              </div>
+            </div>
+            <p class="song-duration">4:42</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo5"></div>
+              <div class="song-info">
+                <p class="song-title">A History of Bad Men</p>
+                <p class="song-artist">Melvins</p>
+              </div>
+            </div>
+            <p class="song-duration">6:42</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo6"></div>
+              <div class="song-info">
+                <p class="song-title">Stossgebet</p>
+                <p class="song-artist">Powerworlf</p>
+              </div>
+            </div>
+            <p class="song-duration">3:38</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo7"></div>
+              <div class="song-info">
+                <p class="song-title">Empress Rising</p>
+                <p class="song-artist">Monolord</p>
+              </div>
+            </div>
+            <p class="song-duration">12:19</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo8"></div>
+              <div class="song-info">
+                <p class="song-title">Mirror Messiah</p>
+                <p class="song-artist">Black Pyramid</p>
+              </div>
+            </div>
+            <p class="song-duration">7:07</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo9"></div>
+              <div class="song-info">
+                <p class="song-title">Sparta</p>
+                <p class="song-artist">Sabaton</p>
+              </div>
+            </div>
+            <p class="song-duration">4:24</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo10"></div>
+              <div class="song-info">
+                <p class="song-title">Dunwich</p>
+                <p class="song-artist">Electric Wizard</p>
+              </div>
+            </div>
+            <p class="song-duration">5:36</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="playlists-numbers">
+      <div class="number number1">
+        <h1>43</h1>
+        <h2>Scheduled Festivals</h2>
+      </div>
+      <div class="number number2">
+        <h1>172</h1>
+        <h2>Organized Concerts</h2>
+      </div>
+      <div class="number number3">
+        <h1>542</h1>
+        <h2>Tours Made</h2>
+      </div>
+    </div>
+    <section class="events" id="events">
+      <div class="title-section">
+        <h1>Events</h1>
+        <h2>where to go</h2>
+      </div>
+      <div class="content-section">
+        <div class="events-column events-column1">
+          <div class="event event1">
+            <div class="event-date">
+              <span>06</span>
+              <h2>APR</h2>
+            </div>
+            <div class="event-info">
+              <span>Inferno Festival</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Oslo (Norway)</p>
+              </div>
+              <a href="https://www.infernofestival.net/no/Festival/News.aspx"
+                >More info</a
+              >
+            </div>
+          </div>
+          <div class="event event2">
+            <div class="event-date">
+              <span>19</span>
+              <h2>MAY</h2>
+            </div>
+            <div class="event-info">
+              <span>Desertfest</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Berlin (Germany)</p>
+              </div>
+              <a href="https://www.desertfest.de/">More info</a>
+            </div>
+          </div>
+          <div class="event event3">
+            <div class="event-date">
+              <span>07</span>
+              <h2>JUN</h2>
+            </div>
+            <div class="event-info">
+              <span>Mystic Festival</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Gdansk (Poland)</p>
+              </div>
+              <a href="https://www.mysticfestival.pl/en/landing/">More info</a>
+            </div>
+          </div>
+          <div class="event event4">
+            <div class="event-date">
+              <span>08</span>
+              <h2>JUN</h2>
+            </div>
+            <div class="event-info">
+              <span>Download Festival</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Derby (United Kingdom)</p>
+              </div>
+              <a href="https://downloadfestival.co.uk/">More info</a>
+            </div>
+          </div>
+          <div class="event event5">
+            <div class="event-date">
+              <span>16</span>
+              <h2>JUN</h2>
+            </div>
+            <div class="event-info">
+              <span>Hellfest Open Air</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Clisson (France)</p>
+              </div>
+              <a href="https://www.hellfest.fr/en/">More info</a>
+            </div>
+          </div>
+        </div>
+        <div class="events-column events-column2">
+          <div class="event event6">
+            <div class="event-date">
+              <span>16</span>
+              <h2>JUN</h2>
+            </div>
+            <div class="event-info">
+              <span>Graspop Metal Meeting</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Dessel (Belgium)</p>
+              </div>
+              <a href="https://www.graspop.be/en/">More info</a>
+            </div>
+          </div>
+          <div class="event event7">
+            <div class="event-date">
+              <span>21</span>
+              <h2>JUN</h2>
+            </div>
+            <div class="event-info">
+              <span>Nummirock Festival</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Nummijärvi (Finland)</p>
+              </div>
+              <a href="http://www.nummirock.fi/">More info</a>
+            </div>
+          </div>
+          <div class="event event8">
+            <div class="event-date">
+              <span>28</span>
+              <h2>JUN</h2>
+            </div>
+            <div class="event-info">
+              <span>Resurrection Fest</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Vivero (Spain)</p>
+              </div>
+              <a href="https://www.resurrectionfest.es/?lang=en">More info</a>
+            </div>
+          </div>
+          <div class="event event9">
+            <div class="event-date">
+              <span>13</span>
+              <h2>JUL</h2>
+            </div>
+            <div class="event-info">
+              <span>Masters Of Rock</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Vizovice (Czech Republic)</p>
+              </div>
+              <a href="https://www.mastersofrock.cz/en/">More info</a>
+            </div>
+          </div>
+          <div class="event event10">
+            <div class="event-date">
+              <span>01</span>
+              <h2>SEP</h2>
+            </div>
+            <div class="event-info">
+              <span>Metal On The Hill</span>
+              <div class="event-location">
+                <div class="location-icon"></div>
+                <p>Graz (Austria)</p>
+              </div>
+              <a
+                href="http://www.metal-on-the-hill.com/http://www.metal-on-the-hill.com/"
+                >More info</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="partners">
+        <div class="partner partner1"></div>
+        <div class="partner partner2"></div>
+        <div class="partner partner3"></div>
+        <div class="partner partner4"></div>
+      </div>
+      <div class="footer">
+        <div class="footer-sections">
+          <div class="footer-section1">
+            <div class="minilogo">
+              <h1><a href="index.html">Thunder Records</a></h1>
+            </div>
+            <div class="footer-social-media">
+              <div class="social-media-icon social-media-icon1"></div>
+              <div class="social-media-icon social-media-icon2"></div>
+              <div class="social-media-icon social-media-icon3"></div>
+              <div class="social-media-icon social-media-icon4"></div>
+            </div>
+          </div>
+          <div class="footer-section2">
+            <h2>sections</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="artists.html">Artists</a></li>
+              <li><a href="artists.html#playlists">Playlists</a></li>
+              <li><a href="artists.html#events">Events</a></li>
+              <li><a href="merchandising.html">Merchandising</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section3">
+            <h2>support</h2>
+            <ul>
+              <li><a href="#">Conditions</a></li>
+              <li><a href="#">Cookie Statement</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+          </div>
+          <div class="footer-section4">
+            <h2>newsletter</h2>
+            <input
+              type="email"
+              id="footer-email"
+              placeholder="Enter your e-mail address"
+            />
+            <button>Sign Up</button>
+          </div>
+        </div>
+        <div class="footer-copy">
+          <p>&#169; Copyright 2023 Thunder Records, Inc.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
