@@ -162,6 +162,12 @@ button {
   font-size: 1.3em;
 
   cursor: pointer;
+  transition: all 0.8s, color 0.3s 0.3s;
+}
+
+button:hover {
+  box-shadow: 300px 0 0 0 rgba(0, 0, 0, 0.25) inset,
+    -300px 0 0 0 rgba(0, 0, 0, 0.25) inset;
 }
 
 html {
@@ -291,6 +297,28 @@ header {
 
 .collapsed-content li a {
   color: var(--white-color);
+}
+
+.collapsed-content li a {
+  background: linear-gradient(0deg, white, white) no-repeat right bottom / 0
+    var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 100%;
+  padding-bottom: 2px;
+  --bg-h: 2px;
+}
+
+.collapsed-content li a:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+.collapsed-content li a {
+  color: var(--white-color);
+  text-shadow: 7px 7px 5px #111111;
+
+  text-decoration: none;
+  line-height: 1;
 }
 
 .show {
@@ -599,32 +627,6 @@ header {
   background-image: url(../assets/video-thumbnail1.png);
 }
 
-.slider-video ul {
-  width: 45%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  list-style-type: none;
-}
-
-.slider-video ul li {
-  width: 10px;
-  height: 10px;
-
-  display: inline-block;
-
-  margin: 10px 0 10px 0;
-
-  background-color: var(--white-color);
-  border-radius: 100%;
-}
-
-.slider-video ul li.active {
-  background-color: var(--yellow-color);
-}
-
 /************************************ INSTALLATIONS ************************************/
 
 .installations {
@@ -684,8 +686,6 @@ header {
 }
 
 .artists-genres-nav {
-  padding: 30px 60px 30px 60px;
-
   background-color: var(--grey-color);
 }
 
@@ -695,9 +695,36 @@ header {
 }
 
 .artists-genres-nav li {
+  border-top: 30px solid var(--grey-color);
+  border-left: 60px solid var(--grey-color);
+  border-right: 60px solid var(--grey-color);
+  border-bottom: 30px solid var(--grey-color);
+
+  background-color: var(--grey-color);
   color: var(--yellow-color);
+
   text-transform: uppercase;
   font-size: 2.25em;
+
+  cursor: pointer;
+}
+
+.artists-genres-nav li.active {
+  border-top: 30px solid var(--partners-color);
+  border-left: 60px solid var(--partners-color);
+  border-right: 60px solid var(--partners-color);
+  border-bottom: 30px solid var(--partners-color);
+
+  background-color: var(--partners-color);
+}
+
+.artists-genres-nav li:hover {
+  border-top: 30px solid var(--footer-color);
+  border-left: 60px solid var(--footer-color);
+  border-right: 60px solid var(--footer-color);
+  border-bottom: 30px solid var(--footer-color);
+
+  background-color: var(--footer-color);
 }
 
 .artists .content-section {
@@ -801,6 +828,14 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
+  cursor: pointer;
+  transition: all 0.8s, color 0.3s 0.3s;
+}
+
+.playlists-photo:hover {
+  box-shadow: 560px 0 0 0 rgba(0, 0, 0, 0.25) inset,
+    -560px 0 0 0 rgba(0, 0, 0, 0.25) inset;
 }
 
 .playlists-photo1 {
@@ -833,6 +868,14 @@ header {
   align-items: center;
 
   padding: 12px 30px 12px 30px;
+
+  cursor: pointer;
+  transition: all 0.8s, color 0.3s 0.3s;
+}
+
+.song:hover {
+  box-shadow: 1920px 0 0 0 rgba(0, 0, 0, 0.25) inset,
+    -1920px 0 0 0 rgba(0, 0, 0, 0.25) inset;
 }
 
 .song-bg-light {
@@ -1047,95 +1090,79 @@ header {
   margin-bottom: 60px;
 }
 
-.new-products-banner-container {
+#new-products-banner-container {
   overflow: hidden;
 }
 
-.new-products-banner-wrapper {
-  display: flex;
+#new-products-banner-wrapper {
+  /*display: flex;
+    
+  animation: slide 16s infinite;*/
 
-  animation: slide 16s infinite;
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+
+  transition: all 750ms ease;
+  left: 0;
+}
+
+#new-products-banner-wrapper li {
+  position: relative;
+  height: 100%;
+
+  float: left;
 }
 
 .new-products-banner {
   height: 634.328px;
 }
 
-@keyframes slide {
-  0% {
+/*@keyframes slide {
+  0%{
     transform: translateX(0);
   }
-  10% {
+  10%{
     transform: translateX(0);
   }
-  20% {
+  20%{
     transform: translateX(-100%);
   }
-  30% {
+  30%{
     transform: translateX(-100%);
   }
-  40% {
+  40%{
     transform: translateX(-200%);
   }
-  50% {
+  50%{
     transform: translateX(-200%);
   }
-  60% {
+  60%{
     transform: translateX(-300%);
   }
-  70% {
+  70%{
     transform: translateX(-300%);
   }
-  80% {
+  80%{
     transform: translateX(-400%);
   }
-  90% {
+  90%{
     transform: translateX(-400%);
   }
-  100% {
+  100%{
     transform: translateX(-400%);
   }
-}
-
-.slider-merchandising {
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-}
-
-.slider-merchandising ul {
-  width: 20%;
-
-  display: flex;
-  justify-content: space-between;
-
-  margin-top: 60px;
-
-  list-style-type: none;
-}
-
-.slider-merchandising ul li {
-  width: 15px;
-  height: 15px;
-
-  display: inline-block;
-
-  border-radius: 100%;
-
-  background-color: var(--white-color);
-}
-
-.slider-merchandising ul li.active {
-  background-color: var(--yellow-color);
-}
+}*/
 
 .merchandising-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  margin: 60px 30px 60px 30px;
+  margin: 120px 30px 60px 30px;
 }
 
 .product-category {
@@ -1150,6 +1177,14 @@ header {
 
   background-color: var(--yellow-color);
   color: var(--black-color);
+
+  cursor: pointer;
+  transition: all 0.8s, color 0.3s 0.3s;
+}
+
+.product-category:hover {
+  box-shadow: 560px 0 0 0 rgba(0, 0, 0, 0.25) inset,
+    -560px 0 0 0 rgba(0, 0, 0, 0.25) inset;
 }
 
 .product-category-icon {
@@ -1348,6 +1383,11 @@ header {
   text-transform: uppercase;
 }
 
+.contact-fields-button button:hover {
+  box-shadow: 1000px 0 0 0 rgba(0, 0, 0, 0.25) inset,
+    -1000px 0 0 0 rgba(0, 0, 0, 0.25) inset;
+}
+
 .contact-methods {
   display: flex;
   flex-direction: column;
@@ -1526,6 +1566,28 @@ header {
 
 .footer-sections li:last-child {
   margin: 0;
+}
+
+.footer-sections li a {
+  background: linear-gradient(0deg, white, white) no-repeat right bottom / 0
+    var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 100%;
+  padding-bottom: 2px;
+  --bg-h: 2px;
+}
+
+.footer-sections li a:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+
+.footer-sections li a {
+  color: var(--white-color);
+  text-shadow: 7px 7px 5px #111111;
+
+  text-decoration: none;
+  line-height: 1;
 }
 
 .footer-section4 {
@@ -1787,6 +1849,27 @@ header {
 
   .artists .content-section {
     padding: 30px;
+  }
+
+  .artists-genres-nav li {
+    border-top: 15px solid var(--grey-color);
+    border-left: 30px solid var(--grey-color);
+    border-right: 30px solid var(--grey-color);
+    border-bottom: 15px solid var(--grey-color);
+  }
+
+  .artists-genres-nav li.active {
+    border-top: 15px solid var(--partners-color);
+    border-left: 30px solid var(--partners-color);
+    border-right: 30px solid var(--partners-color);
+    border-bottom: 15px solid var(--partners-color);
+  }
+
+  .artists-genres-nav li:hover {
+    border-top: 15px solid var(--footer-color);
+    border-left: 30px solid var(--footer-color);
+    border-right: 30px solid var(--footer-color);
+    border-bottom: 15px solid var(--footer-color);
   }
 
   .artist {
@@ -2071,8 +2154,25 @@ header {
     padding: 30px 30px 0 30px;
   }
 
-  .artists-genres-nav {
-    padding: 30px;
+  .artists-genres-nav li {
+    border-top: 10px solid var(--grey-color);
+    border-left: 15px solid var(--grey-color);
+    border-right: 15px solid var(--grey-color);
+    border-bottom: 10px solid var(--grey-color);
+  }
+
+  .artists-genres-nav li.active {
+    border-top: 10px solid var(--partners-color);
+    border-left: 15px solid var(--partners-color);
+    border-right: 15px solid var(--partners-color);
+    border-bottom: 10px solid var(--partners-color);
+  }
+
+  .artists-genres-nav li:hover {
+    border-top: 10px solid var(--footer-color);
+    border-left: 15px solid var(--footer-color);
+    border-right: 15px solid var(--footer-color);
+    border-bottom: 10px solid var(--footer-color);
   }
 
   .artists .content-section {
@@ -2435,12 +2535,20 @@ header {
     padding: 30px 30px 0 30px;
   }
 
-  .artists-genres-nav {
-    padding: 30px 10px 30px 10px;
+  .artists-genres-nav li {
+    border: 10px solid var(--grey-color);
+  }
+
+  .artists-genres-nav li.active {
+    border: 10px solid var(--partners-color);
+  }
+
+  .artists-genres-nav li:hover {
+    border: 10px solid var(--footer-color);
   }
 
   .artists-genres-nav li {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .artists .content-section {
@@ -2570,7 +2678,7 @@ header {
   .merchandising-nav {
     flex-direction: column;
 
-    margin: 60px;
+    margin: 90px 60px 60px 60px;
   }
 
   .product-category {

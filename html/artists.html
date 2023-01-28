@@ -54,69 +54,363 @@
       </div>
       <div class="artists-genres-nav">
         <ul>
-          <li>alternative</li>
-          <li>death</li>
-          <li>doom</li>
-          <li>progressive</li>
+          <li id="artists-genres-nav1" class="active" onclick="changeArtist(1)">
+            alternative
+          </li>
+          <li id="artists-genres-nav2" onclick="changeArtist(2)">death</li>
+          <li id="artists-genres-nav3" onclick="changeArtist(3)">doom</li>
+          <li id="artists-genres-nav4" onclick="changeArtist(4)">
+            progressive
+          </li>
         </ul>
       </div>
       <div class="content-section">
-        <div class="artists-row artists-row1">
-          <div class="artist artist1">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="../assets/artists-artist1.jpg" />
-            <div class="content-details fadeIn-top">
-              <a href="https://accuser.de/"><h3>Accuser</h3></a>
-              <p>Flow through various moods and styles</p>
+        <div id="artists-group1">
+          <div class="artists-row artists-row1">
+            <a href="https://accuser.de/">
+              <div class="artist artist1">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist1.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Accuser</h3>
+                  <p>Flow through various moods and styles</p>
+                </div>
+              </div>
+            </a>
+            <div class="artist artist2">
+              <a href="https://candiria.bandcamp.com/">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist2.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Candiria</h3>
+                  <p>The urban fusion of different music styles</p>
+                </div>
+              </a>
             </div>
+            <a href="https://mercyfulfatecoven.com/">
+              <div class="artist artist3">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist3.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Mercyful Fate</h3>
+                  <p>Everyday is Halloween</p>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="artist artist2">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="../assets/artists-artist2.jpg" />
-            <div class="content-details fadeIn-top">
-              <a href="https://candiria.bandcamp.com/"><h3>Candiria</h3></a>
-              <p>The urban fusion of different music styles</p>
+          <div class="artists-row artists-row2">
+            <a href="https://www.facebook.com/SOILENTGREEN/">
+              <div class="artist artist4">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist4.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Soilent Green</h3>
+                  <p>Grindcore and Sludge fusion is fantastic</p>
+                </div>
+              </div>
+            </a>
+            <div class="artist artist5">
+              <a href="https://tyr.fo/">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist5.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Týr</h3>
+                  <p>
+                    Ruthlessly melodic and irresistibly compelling progressive
+                    folk
+                  </p>
+                </div>
+              </a>
             </div>
-          </div>
-          <div class="artist artist3">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="../assets/artists-artist3.jpg" />
-            <div class="content-details fadeIn-top">
-              <a href="https://mercyfulfatecoven.com/"
-                ><h3>Mercyful Fate</h3></a
-              >
-              <p>Everyday is Halloween</p>
-            </div>
+            <a href="https://wakegrind.bandcamp.com/">
+              <div class="artist artist6">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist6.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Wake</h3>
+                  <p>Darkness from the True North</p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="artists-row artists-row2">
-          <div class="artist artist4">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="../assets/artists-artist4.jpg" />
-            <div class="content-details fadeIn-top">
-              <a href="https://www.facebook.com/SOILENTGREEN/"
-                ><h3>Soilent Green</h3></a
-              >
-              <p>Grindcore and Sludge fusion is fantastic</p>
+        <div id="artists-group2" hidden>
+          <div class="artists-row artists-row1">
+            <a href="https://accuser.de/">
+              <div class="artist artist1">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist7.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Accuser</h3>
+                  <p>Flow through various moods and styles</p>
+                </div>
+              </div>
+            </a>
+            <div class="artist artist2">
+              <a href="https://candiria.bandcamp.com/">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist8.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Candiria</h3>
+                  <p>The urban fusion of different music styles</p>
+                </div>
+              </a>
             </div>
+            <a href="https://mercyfulfatecoven.com/">
+              <div class="artist artist3">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist9.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Mercyful Fate</h3>
+                  <p>Everyday is Halloween</p>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="artist artist5">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="../assets/artists-artist5.jpg" />
-            <div class="content-details fadeIn-top">
-              <a href="https://tyr.fo/"><h3>Týr</h3></a>
-              <p>
-                Ruthlessly melodic and irresistibly compelling progressive folk
-              </p>
+          <div class="artists-row artists-row2">
+            <a href="https://www.facebook.com/SOILENTGREEN/">
+              <div class="artist artist4">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist10.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Soilent Green</h3>
+                  <p>Grindcore and Sludge fusion is fantastic</p>
+                </div>
+              </div>
+            </a>
+            <div class="artist artist5">
+              <a href="https://tyr.fo/">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist11.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Týr</h3>
+                  <p>
+                    Ruthlessly melodic and irresistibly compelling progressive
+                    folk
+                  </p>
+                </div>
+              </a>
             </div>
+            <a href="https://wakegrind.bandcamp.com/">
+              <div class="artist artist6">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist12.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Wake</h3>
+                  <p>Darkness from the True North</p>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="artist artist6">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="../assets/artists-artist6.jpg" />
-            <div class="content-details fadeIn-top">
-              <a href="https://wakegrind.bandcamp.com/"><h3>Wake</h3></a>
-              <p>Darkness from the True North</p>
+        </div>
+        <div id="artists-group3" hidden>
+          <div class="artists-row artists-row1">
+            <a href="https://accuser.de/">
+              <div class="artist artist1">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist13.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Accuser</h3>
+                  <p>Flow through various moods and styles</p>
+                </div>
+              </div>
+            </a>
+            <div class="artist artist2">
+              <a href="https://candiria.bandcamp.com/">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist14.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Candiria</h3>
+                  <p>The urban fusion of different music styles</p>
+                </div>
+              </a>
             </div>
+            <a href="https://mercyfulfatecoven.com/">
+              <div class="artist artist3">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist15.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Mercyful Fate</h3>
+                  <p>Everyday is Halloween</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="artists-row artists-row2">
+            <a href="https://www.facebook.com/SOILENTGREEN/">
+              <div class="artist artist4">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist16.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Soilent Green</h3>
+                  <p>Grindcore and Sludge fusion is fantastic</p>
+                </div>
+              </div>
+            </a>
+            <div class="artist artist5">
+              <a href="https://tyr.fo/">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist17.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Týr</h3>
+                  <p>
+                    Ruthlessly melodic and irresistibly compelling progressive
+                    folk
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a href="https://wakegrind.bandcamp.com/">
+              <div class="artist artist6">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist18.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Wake</h3>
+                  <p>Darkness from the True North</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="artists-group4" hidden>
+          <div class="artists-row artists-row1">
+            <a href="https://accuser.de/">
+              <div class="artist artist1">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist19.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Accuser</h3>
+                  <p>Flow through various moods and styles</p>
+                </div>
+              </div>
+            </a>
+            <div class="artist artist2">
+              <a href="https://candiria.bandcamp.com/">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist20.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Candiria</h3>
+                  <p>The urban fusion of different music styles</p>
+                </div>
+              </a>
+            </div>
+            <a href="https://mercyfulfatecoven.com/">
+              <div class="artist artist3">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist21.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Mercyful Fate</h3>
+                  <p>Everyday is Halloween</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="artists-row artists-row2">
+            <a href="https://www.facebook.com/SOILENTGREEN/">
+              <div class="artist artist4">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist22.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Soilent Green</h3>
+                  <p>Grindcore and Sludge fusion is fantastic</p>
+                </div>
+              </div>
+            </a>
+            <div class="artist artist5">
+              <a href="https://tyr.fo/">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist23.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Týr</h3>
+                  <p>
+                    Ruthlessly melodic and irresistibly compelling progressive
+                    folk
+                  </p>
+                </div>
+              </a>
+            </div>
+            <a href="https://wakegrind.bandcamp.com/">
+              <div class="artist artist6">
+                <div class="content-overlay"></div>
+                <img
+                  class="content-image"
+                  src="../assets/artists-artist24.jpg"
+                />
+                <div class="content-details fadeIn-top">
+                  <h3>Wake</h3>
+                  <p>Darkness from the True North</p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -142,14 +436,607 @@
       </div>
       <div class="content-section">
         <div class="playlists-nav">
-          <div class="playlists-photo playlists-photo1"></div>
-          <div class="playlists-photo playlists-photo2"></div>
-          <div class="playlists-photo playlists-photo3"></div>
-          <div class="playlists-photo playlists-photo4"></div>
-          <div class="playlists-photo playlists-photo5"></div>
-          <div class="playlists-photo playlists-photo6"></div>
+          <div
+            class="playlists-photo playlists-photo1"
+            onclick="changePlaylist(1)"
+          ></div>
+          <div
+            class="playlists-photo playlists-photo2"
+            onclick="changePlaylist(2)"
+          ></div>
+          <div
+            class="playlists-photo playlists-photo3"
+            onclick="changePlaylist(3)"
+          ></div>
+          <div
+            class="playlists-photo playlists-photo4"
+            onclick="changePlaylist(4)"
+          ></div>
+          <div
+            class="playlists-photo playlists-photo5"
+            onclick="changePlaylist(5)"
+          ></div>
+          <div
+            class="playlists-photo playlists-photo6"
+            onclick="changePlaylist(6)"
+          ></div>
         </div>
-        <div class="playlist playlist1">
+        <div id="playlist1" class="playlist">
+          <div class="song song-bg-light active">
+            <div class="song-component">
+              <div
+                class="song-play"
+                onclick="playSong('volt-thrower.mp3')"
+              ></div>
+              <div class="song-photo song-photo1"></div>
+              <div class="song-info">
+                <p class="song-title">Volt Thrower</p>
+                <p class="song-artist">Conan</p>
+              </div>
+            </div>
+            <p class="song-duration">4:04</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo2"></div>
+              <div class="song-info">
+                <p class="song-title">Blood and Thunder</p>
+                <p class="song-artist">Mastodon</p>
+              </div>
+            </div>
+            <p class="song-duration">3:49</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo3"></div>
+              <div class="song-info">
+                <p class="song-title">Hearts on Fire</p>
+                <p class="song-artist">HammerFall</p>
+              </div>
+            </div>
+            <p class="song-duration">3:51</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo4"></div>
+              <div class="song-info">
+                <p class="song-title">Heidrun</p>
+                <p class="song-artist">Amon Amarth</p>
+              </div>
+            </div>
+            <p class="song-duration">4:42</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo5"></div>
+              <div class="song-info">
+                <p class="song-title">A History of Bad Men</p>
+                <p class="song-artist">Melvins</p>
+              </div>
+            </div>
+            <p class="song-duration">6:42</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo6"></div>
+              <div class="song-info">
+                <p class="song-title">Stossgebet</p>
+                <p class="song-artist">Powerworlf</p>
+              </div>
+            </div>
+            <p class="song-duration">3:38</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo7"></div>
+              <div class="song-info">
+                <p class="song-title">Empress Rising</p>
+                <p class="song-artist">Monolord</p>
+              </div>
+            </div>
+            <p class="song-duration">12:19</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo8"></div>
+              <div class="song-info">
+                <p class="song-title">Mirror Messiah</p>
+                <p class="song-artist">Black Pyramid</p>
+              </div>
+            </div>
+            <p class="song-duration">7:07</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo9"></div>
+              <div class="song-info">
+                <p class="song-title">Sparta</p>
+                <p class="song-artist">Sabaton</p>
+              </div>
+            </div>
+            <p class="song-duration">4:24</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo10"></div>
+              <div class="song-info">
+                <p class="song-title">Dunwich</p>
+                <p class="song-artist">Electric Wizard</p>
+              </div>
+            </div>
+            <p class="song-duration">5:36</p>
+          </div>
+        </div>
+        <div id="playlist2" class="playlist" hidden>
+          <div class="song song-bg-light active">
+            <div class="song-component">
+              <div
+                class="song-play"
+                onclick="playSong('volt-thrower.mp3')"
+              ></div>
+              <div class="song-photo song-photo1"></div>
+              <div class="song-info">
+                <p class="song-title">Volt Thrower</p>
+                <p class="song-artist">Conan</p>
+              </div>
+            </div>
+            <p class="song-duration">4:04</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo2"></div>
+              <div class="song-info">
+                <p class="song-title">Blood and Thunder</p>
+                <p class="song-artist">Mastodon</p>
+              </div>
+            </div>
+            <p class="song-duration">3:49</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo3"></div>
+              <div class="song-info">
+                <p class="song-title">Hearts on Fire</p>
+                <p class="song-artist">HammerFall</p>
+              </div>
+            </div>
+            <p class="song-duration">3:51</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo4"></div>
+              <div class="song-info">
+                <p class="song-title">Heidrun</p>
+                <p class="song-artist">Amon Amarth</p>
+              </div>
+            </div>
+            <p class="song-duration">4:42</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo5"></div>
+              <div class="song-info">
+                <p class="song-title">A History of Bad Men</p>
+                <p class="song-artist">Melvins</p>
+              </div>
+            </div>
+            <p class="song-duration">6:42</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo6"></div>
+              <div class="song-info">
+                <p class="song-title">Stossgebet</p>
+                <p class="song-artist">Powerworlf</p>
+              </div>
+            </div>
+            <p class="song-duration">3:38</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo7"></div>
+              <div class="song-info">
+                <p class="song-title">Empress Rising</p>
+                <p class="song-artist">Monolord</p>
+              </div>
+            </div>
+            <p class="song-duration">12:19</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo8"></div>
+              <div class="song-info">
+                <p class="song-title">Mirror Messiah</p>
+                <p class="song-artist">Black Pyramid</p>
+              </div>
+            </div>
+            <p class="song-duration">7:07</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo9"></div>
+              <div class="song-info">
+                <p class="song-title">Sparta</p>
+                <p class="song-artist">Sabaton</p>
+              </div>
+            </div>
+            <p class="song-duration">4:24</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo10"></div>
+              <div class="song-info">
+                <p class="song-title">Dunwich</p>
+                <p class="song-artist">Electric Wizard</p>
+              </div>
+            </div>
+            <p class="song-duration">5:36</p>
+          </div>
+        </div>
+        <div id="playlist3" class="playlist" hidden>
+          <div class="song song-bg-light active">
+            <div class="song-component">
+              <div
+                class="song-play"
+                onclick="playSong('volt-thrower.mp3')"
+              ></div>
+              <div class="song-photo song-photo1"></div>
+              <div class="song-info">
+                <p class="song-title">Volt Thrower</p>
+                <p class="song-artist">Conan</p>
+              </div>
+            </div>
+            <p class="song-duration">4:04</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo2"></div>
+              <div class="song-info">
+                <p class="song-title">Blood and Thunder</p>
+                <p class="song-artist">Mastodon</p>
+              </div>
+            </div>
+            <p class="song-duration">3:49</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo3"></div>
+              <div class="song-info">
+                <p class="song-title">Hearts on Fire</p>
+                <p class="song-artist">HammerFall</p>
+              </div>
+            </div>
+            <p class="song-duration">3:51</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo4"></div>
+              <div class="song-info">
+                <p class="song-title">Heidrun</p>
+                <p class="song-artist">Amon Amarth</p>
+              </div>
+            </div>
+            <p class="song-duration">4:42</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo5"></div>
+              <div class="song-info">
+                <p class="song-title">A History of Bad Men</p>
+                <p class="song-artist">Melvins</p>
+              </div>
+            </div>
+            <p class="song-duration">6:42</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo6"></div>
+              <div class="song-info">
+                <p class="song-title">Stossgebet</p>
+                <p class="song-artist">Powerworlf</p>
+              </div>
+            </div>
+            <p class="song-duration">3:38</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo7"></div>
+              <div class="song-info">
+                <p class="song-title">Empress Rising</p>
+                <p class="song-artist">Monolord</p>
+              </div>
+            </div>
+            <p class="song-duration">12:19</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo8"></div>
+              <div class="song-info">
+                <p class="song-title">Mirror Messiah</p>
+                <p class="song-artist">Black Pyramid</p>
+              </div>
+            </div>
+            <p class="song-duration">7:07</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo9"></div>
+              <div class="song-info">
+                <p class="song-title">Sparta</p>
+                <p class="song-artist">Sabaton</p>
+              </div>
+            </div>
+            <p class="song-duration">4:24</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo10"></div>
+              <div class="song-info">
+                <p class="song-title">Dunwich</p>
+                <p class="song-artist">Electric Wizard</p>
+              </div>
+            </div>
+            <p class="song-duration">5:36</p>
+          </div>
+        </div>
+        <div id="playlist4" class="playlist" hidden>
+          <div class="song song-bg-light active">
+            <div class="song-component">
+              <div
+                class="song-play"
+                onclick="playSong('volt-thrower.mp3')"
+              ></div>
+              <div class="song-photo song-photo1"></div>
+              <div class="song-info">
+                <p class="song-title">Volt Thrower</p>
+                <p class="song-artist">Conan</p>
+              </div>
+            </div>
+            <p class="song-duration">4:04</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo2"></div>
+              <div class="song-info">
+                <p class="song-title">Blood and Thunder</p>
+                <p class="song-artist">Mastodon</p>
+              </div>
+            </div>
+            <p class="song-duration">3:49</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo3"></div>
+              <div class="song-info">
+                <p class="song-title">Hearts on Fire</p>
+                <p class="song-artist">HammerFall</p>
+              </div>
+            </div>
+            <p class="song-duration">3:51</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo4"></div>
+              <div class="song-info">
+                <p class="song-title">Heidrun</p>
+                <p class="song-artist">Amon Amarth</p>
+              </div>
+            </div>
+            <p class="song-duration">4:42</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo5"></div>
+              <div class="song-info">
+                <p class="song-title">A History of Bad Men</p>
+                <p class="song-artist">Melvins</p>
+              </div>
+            </div>
+            <p class="song-duration">6:42</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo6"></div>
+              <div class="song-info">
+                <p class="song-title">Stossgebet</p>
+                <p class="song-artist">Powerworlf</p>
+              </div>
+            </div>
+            <p class="song-duration">3:38</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo7"></div>
+              <div class="song-info">
+                <p class="song-title">Empress Rising</p>
+                <p class="song-artist">Monolord</p>
+              </div>
+            </div>
+            <p class="song-duration">12:19</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo8"></div>
+              <div class="song-info">
+                <p class="song-title">Mirror Messiah</p>
+                <p class="song-artist">Black Pyramid</p>
+              </div>
+            </div>
+            <p class="song-duration">7:07</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo9"></div>
+              <div class="song-info">
+                <p class="song-title">Sparta</p>
+                <p class="song-artist">Sabaton</p>
+              </div>
+            </div>
+            <p class="song-duration">4:24</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo10"></div>
+              <div class="song-info">
+                <p class="song-title">Dunwich</p>
+                <p class="song-artist">Electric Wizard</p>
+              </div>
+            </div>
+            <p class="song-duration">5:36</p>
+          </div>
+        </div>
+        <div id="playlist5" class="playlist" hidden>
+          <div class="song song-bg-light active">
+            <div class="song-component">
+              <div
+                class="song-play"
+                onclick="playSong('volt-thrower.mp3')"
+              ></div>
+              <div class="song-photo song-photo1"></div>
+              <div class="song-info">
+                <p class="song-title">Volt Thrower</p>
+                <p class="song-artist">Conan</p>
+              </div>
+            </div>
+            <p class="song-duration">4:04</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo2"></div>
+              <div class="song-info">
+                <p class="song-title">Blood and Thunder</p>
+                <p class="song-artist">Mastodon</p>
+              </div>
+            </div>
+            <p class="song-duration">3:49</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo3"></div>
+              <div class="song-info">
+                <p class="song-title">Hearts on Fire</p>
+                <p class="song-artist">HammerFall</p>
+              </div>
+            </div>
+            <p class="song-duration">3:51</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo4"></div>
+              <div class="song-info">
+                <p class="song-title">Heidrun</p>
+                <p class="song-artist">Amon Amarth</p>
+              </div>
+            </div>
+            <p class="song-duration">4:42</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo5"></div>
+              <div class="song-info">
+                <p class="song-title">A History of Bad Men</p>
+                <p class="song-artist">Melvins</p>
+              </div>
+            </div>
+            <p class="song-duration">6:42</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo6"></div>
+              <div class="song-info">
+                <p class="song-title">Stossgebet</p>
+                <p class="song-artist">Powerworlf</p>
+              </div>
+            </div>
+            <p class="song-duration">3:38</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo7"></div>
+              <div class="song-info">
+                <p class="song-title">Empress Rising</p>
+                <p class="song-artist">Monolord</p>
+              </div>
+            </div>
+            <p class="song-duration">12:19</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo8"></div>
+              <div class="song-info">
+                <p class="song-title">Mirror Messiah</p>
+                <p class="song-artist">Black Pyramid</p>
+              </div>
+            </div>
+            <p class="song-duration">7:07</p>
+          </div>
+          <div class="song song-bg-light">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo9"></div>
+              <div class="song-info">
+                <p class="song-title">Sparta</p>
+                <p class="song-artist">Sabaton</p>
+              </div>
+            </div>
+            <p class="song-duration">4:24</p>
+          </div>
+          <div class="song song-bg-dark">
+            <div class="song-component">
+              <div class="song-play"></div>
+              <div class="song-photo song-photo10"></div>
+              <div class="song-info">
+                <p class="song-title">Dunwich</p>
+                <p class="song-artist">Electric Wizard</p>
+              </div>
+            </div>
+            <p class="song-duration">5:36</p>
+          </div>
+        </div>
+        <div id="playlist6" class="playlist" hidden>
           <div class="song song-bg-light active">
             <div class="song-component">
               <div
