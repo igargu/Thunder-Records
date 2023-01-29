@@ -15,8 +15,23 @@ window.onclick = function (event) {
   }
 };
 
-function playSong(song) {
-  var music = new Audio(song);
+var music = new Audio("https://www.computerhope.com/jargon/m/example.mp3");
+function playSong(songId) {
+  let isSongPlaying = false;
+  for (let i = 1; i < 61; i++) {
+    let song = document.getElementById(`song${i}`);
+    if (song.classList.contains("active")) {
+      song.classList.toggle("active");
+      if (i == songId) {
+        isSongPlaying = true;
+      }
+    }
+  }
+  if (!isSongPlaying) {
+    document.getElementById(`song${songId}`).classList.toggle("active");
+  }
+
+  music.pause();
   music.play();
 }
 
